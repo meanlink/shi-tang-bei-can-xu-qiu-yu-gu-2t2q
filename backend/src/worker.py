@@ -7,6 +7,7 @@ from src.config.settings import REDIS_URL
 from src.models import Job, Dataset, Report
 from src.services.business import analyze
 from src.services.reports import deliver
+from src.services.kitchen import replay_pending_for_worker
 from src.services.audit import record
 logging.basicConfig(level=logging.INFO)
 def execute(job_id):
@@ -29,6 +30,9 @@ def tick():
     with Session() as db:
         queued=list(db.scalars(select(Job.id).where(Job.status=='queued').limit(3)))
     for job_id in queued:execute(job_id)
+    # 厨房更正若在提交后、执行前中断，由后台恢复任务按幂等键重放。
+    try:replay_pending_for_worker()
+    except Exception:logging.exception('Kitchen operation recovery failed')
     with Session() as db:
         for r in db.scalars(select(Report).where(Report.enabled==True,Report.next_run<=time.time())):
             d=deliver(db,r)

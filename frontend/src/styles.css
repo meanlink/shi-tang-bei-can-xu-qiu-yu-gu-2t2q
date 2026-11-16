@@ -3,3 +3,48 @@ body[data-style*=lab]{--paper:oklch(96% .012 140);--surface:oklch(98% .008 140);
 @media(min-width:1600px){main{padding:45px 65px}.shell{grid-template-columns:270px minmax(0,1fr)}}
 @media(max-width:1100px){.shell{grid-template-columns:206px minmax(0,1fr)}aside{padding:25px 18px}header{padding:0 25px}main{padding:26px 25px}footer{margin:0 25px}.brand{font-size:17px}.overview-hero{gap:20px;padding:24px}.numbers{padding-left:18px;gap:18px}.two-columns{gap:25px}.result-selector{flex-wrap:wrap}.dataset-grid,.report-grid{gap:25px;grid-template-columns:1fr 1.4fr}.workbench-grid{gap:25px}.login-story{padding:45px}.login-form{padding:40px}.timeline li{display:block}.timeline span{display:block;margin-top:5px}}
 @media(max-width:767px){.shell{display:block}aside{position:static;min-height:0;height:auto;padding:20px}.brand{flex-direction:row;align-items:center;font-size:18px}.brand-symbol{width:30px;height:30px}.edition,.aside-note,.account{display:none}nav{flex-direction:row;overflow:auto;margin-top:18px;gap:3px}nav a{padding:10px;white-space:nowrap;font-size:11px}nav a small{display:none}header{height:42px;padding:0 20px}header>span:first-child{max-width:65%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}header .live-dot{font-size:9px}main{padding:24px 20px}.page-heading{display:block}.page-heading>.button{margin-top:15px}.overview-hero{grid-template-columns:1fr;padding:20px}.numbers{border-left:0;border-top:1px solid var(--line);padding:18px 0 0;grid-template-columns:repeat(4,1fr);gap:10px}.numbers strong{font-size:25px}.numbers span{font-size:9px}.two-columns,.dataset-grid,.workbench-grid,.report-grid{grid-template-columns:1fr;gap:20px}.section-title span{max-width:55%}.metrics{gap:20px}.metrics strong{font-size:23px}.result-selector>span{font-size:10px}.result-lead h2{font-size:21px}.method-sheet{padding:22px}.login-scene{display:block}.login-story{padding:70px 30px 30px}.login-story>.edition{top:25px}.login-story h1{font-size:40px}.flow-lines{display:none}.login-foot{margin-top:20px}.login-form{padding:35px 30px;max-width:none}.login-form h2{font-size:28px}footer{margin:0 20px;font-size:8px}.delivery{align-items:flex-start;flex-direction:column}body[data-style*=press] .overview-hero{grid-template-columns:1fr}body[data-style*=press] .narrative{order:0}body[data-style*=press] .numbers{border-right:0;padding:18px 0 0}}
+
+/* 厨房连续少备追踪 */
+.kitchen-top{display:grid;grid-template-columns:.72fr 1.6fr;gap:34px;align-items:start}
+.kitchen-top>.panel{margin-top:25px}.stall-panel .batch-list{max-height:210px}
+.batch-item.active{border-left:3px solid var(--accent);padding-left:12px;background:var(--surface)}
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:22px}
+.kpi-strip div{display:flex;flex-direction:column;gap:8px}.kpi-strip span{font-size:11px;color:var(--muted)}
+.kpi-strip strong{font-family:'Noto Serif SC',serif;font-size:27px;font-weight:500}
+.kitchen-forms{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.kitchen-forms h3,.alert-forms h3{font-size:14px;margin-bottom:15px}
+.kitchen-forms form,.alert-forms form{border-top:1px solid var(--line);padding-top:16px}
+.pending-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.pending-grid article{border:1px solid var(--line);border-left:3px solid oklch(68% .12 60);background:var(--surface);padding:14px;display:flex;flex-direction:column;gap:7px}
+.pending-grid strong{font-family:'Noto Serif SC',serif;font-size:15px}
+.pending-grid p{margin:0;font-size:11px;color:var(--muted)}.pending-grid small{font-size:10px;color:var(--muted)}
+.pending-grid .status.pending_plan:before,.pending-grid .status.missing:before{background:oklch(60% .15 30)}
+.pending-grid .status.pending_batch:before{background:oklch(68% .12 60)}
+.alert-card{border:1px solid var(--line);border-left:4px solid var(--accent);background:var(--surface);padding:16px 18px;margin-bottom:14px}
+.alert-card.open{border-left-color:oklch(58% .16 30)}
+.alert-card.confirmed{border-left-color:oklch(52% .12 150)}
+.alert-card.revoked,.alert-card.superseded{border-left-color:var(--muted);opacity:.82}
+.alert-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+.alert-head>div{display:flex;flex-wrap:wrap;align-items:baseline;gap:9px}
+.alert-head strong{font-family:'Noto Serif SC',serif;font-size:15px}
+.alert-head small{font-size:10px;color:var(--muted)}
+.alert-numbers{margin:12px 0 6px;font-size:12px}.alert-numbers strong{font-family:'Noto Serif SC',serif;font-size:17px;font-weight:500}
+.alert-actions{display:flex;gap:10px;margin-top:12px}
+.alert-card .hint{margin:6px 0 0}
+.kitchen-lower{gap:28px}.kitchen-lower .panel{margin-top:25px}
+.trail-item{border-top:1px solid var(--line);padding:14px 0}
+.trail-head{display:flex;gap:12px;align-items:baseline}.trail-head strong{font-family:'Noto Serif SC',serif;font-size:14px}.trail-head small{font-size:10px;color:var(--muted)}
+.trail-source{margin-top:10px;font-size:11px}.trail-source>span{color:var(--muted);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.trail-source ol{list-style:none;margin:7px 0 0;padding:0}
+.trail-source li{border-left:2px solid var(--line);padding:3px 0 9px 12px;font-size:11px;line-height:1.7}
+.trail-source li.active{border-left-color:var(--accent)}
+.trail-source li small{display:block;color:var(--muted);font-size:10px}
+.inline-form{display:flex;gap:14px;align-items:flex-end}.inline-form label{margin:0;flex:1}.inline-form button{white-space:nowrap}
+.alert-timeline li{align-items:flex-start}.alert-timeline p{margin:5px 0 0;font-size:11px}
+.link-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.link-grid h3{font-size:13px}
+.link-card{display:flex;flex-direction:column;gap:4px;border:1px solid var(--line);padding:11px 13px;margin-bottom:9px;font-family:'Noto Serif SC',serif;font-size:13px}
+.link-card span{font-family:'Noto Sans SC',sans-serif;font-size:10px;color:var(--muted)}
+.alert-forms{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:20px}
+.status.superseded:before{background:var(--muted)}
+@media(max-width:1100px){.kitchen-top{grid-template-columns:1fr}.kitchen-forms{grid-template-columns:1fr}.kpi-strip{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:767px){.kpi-strip{grid-template-columns:1fr 1fr;gap:12px}.kpi-strip strong{font-size:23px}.kitchen-forms,.alert-forms,.link-grid{grid-template-columns:1fr}.inline-form{display:block}.inline-form button{margin-top:10px}}
